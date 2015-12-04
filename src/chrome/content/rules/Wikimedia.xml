@@ -30,6 +30,7 @@
 	<target host="enwp.org" />
 	<target host="frwp.org" />
 
+    <target host="wikipedia.com" />
 	<target host="mediawiki.org" />
 	<target host="*.mediawiki.org" />
 	<target host="wikimedia.org" />
@@ -43,6 +44,8 @@
 
 	<target host="wikimediafoundation.org" />
 	<target host="*.wikimediafoundation.org" />
+
+    <target host="wikipedia.com" />
 
 	<!-- Wikimedia projects (also some wikimedia.org subdomains) -->
 	<target host="wikibooks.org" />
@@ -118,6 +121,9 @@
 	<securecookie host="^wikimediafoundation\.org$" name=".+" />
 
 	<rule from="^http://(en|fr)wp\.org/"
+		to="https://$1.wikipedia.org/wiki/" />
+
+	<rule from="^http://*.wikipedia\.com/"
 		to="https://$1.wikipedia.org/wiki/" />
 
 	<rule from="^http://links\.email\.donate\.wikimedia\.org/"
